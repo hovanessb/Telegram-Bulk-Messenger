@@ -7,7 +7,7 @@ import random
 import webbrowser
 
 pyautogui.FAILSAFE = False
-
+MESSAGE = "Hello!"
 def open_deeplink(url):
     """
     Opens a URL/Deeplink in the default web browser or associated application.
@@ -41,7 +41,7 @@ def send_message_with_lag(message_content, message_number):
       open_deeplink(str(excel_data['Username'][message_number]))      
       time.sleep(3)
       time.sleep(thinking_time)
-      pyperclip.copy("Привет! Меня зовут Химена из организации в Порт-Элизабет. Я видела вас в нашем групповом чате. Хотела узнать, какой у Ваш следующий шаг и  заинтересованы ли вы приехать сюда, в Южную Африку, чтобы двигаться?") # Copy the text to the clipboard
+      pyperclip.copy(MESSAGE) # Copy the text to the clipboard
       time.sleep(0.5) # Give a small moment for the clipboard to update
       pyautogui.hotkey('ctrl', 'v')
       time.sleep(0.5) # Give a small moment for the clipboard to update
